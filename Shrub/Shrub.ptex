@@ -1,0 +1,762 @@
+{
+	"connections": [
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "blend_3",
+			"to_port": 0
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "blend_3",
+			"to_port": 1
+		},
+		{
+			"from": "blend_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "fbm2",
+			"from_port": 0,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm2",
+			"from_port": 0,
+			"to": "colorize_3",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_3",
+			"from_port": 0,
+			"to": "blend_5",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_4",
+			"from_port": 0,
+			"to": "blend_6",
+			"to_port": 0
+		},
+		{
+			"from": "blend_5",
+			"from_port": 0,
+			"to": "blend_6",
+			"to_port": 1
+		},
+		{
+			"from": "blend_6",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "colorize_5",
+			"from_port": 0,
+			"to": "blend_7",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "blend_7",
+			"to_port": 1
+		},
+		{
+			"from": "blend_7",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "image_6",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "image_6",
+			"from_port": 0,
+			"to": "colorize_4",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "blend_4",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "blend_3",
+			"to_port": 2
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "blend_6",
+			"to_port": 2
+		},
+		{
+			"from": "decompose",
+			"from_port": 0,
+			"to": "blend_8",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 2,
+			"to": "blend_8",
+			"to_port": 1
+		},
+		{
+			"from": "blend_8",
+			"from_port": 0,
+			"to": "blend_4",
+			"to_port": 0
+		},
+		{
+			"from": "blend_8",
+			"from_port": 0,
+			"to": "blend_5",
+			"to_port": 1
+		},
+		{
+			"from": "blend_8",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "invert",
+			"to_port": 0
+		},
+		{
+			"from": "invert",
+			"from_port": 0,
+			"to": "gaussian_blur",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "gaussian_blur",
+			"to_port": 1
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "gaussian_blur_2",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur_2",
+			"from_port": 0,
+			"to": "gaussian_blur_3",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "gaussian_blur_2",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "gaussian_blur_3",
+			"to_port": 1
+		},
+		{
+			"from": "invert_2",
+			"from_port": 0,
+			"to": "blend_9",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "dilate",
+			"to_port": 0
+		},
+		{
+			"from": "dilate",
+			"from_port": 0,
+			"to": "tones_step",
+			"to_port": 0
+		},
+		{
+			"from": "tones_step",
+			"from_port": 0,
+			"to": "blend_10",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur_3",
+			"from_port": 0,
+			"to": "blend_10",
+			"to_port": 1
+		},
+		{
+			"from": "blend_10",
+			"from_port": 0,
+			"to": "blend_9",
+			"to_port": 0
+		},
+		{
+			"from": "image_7",
+			"from_port": 0,
+			"to": "decompose",
+			"to_port": 0
+		},
+		{
+			"from": "image",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "image_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 7
+		},
+		{
+			"from": "image_4",
+			"from_port": 0,
+			"to": "invert_2",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "269",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub3/Shrub3"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 385,
+				"y": -17
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": true,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 10,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -412.000031,
+				"y": 516
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.417892,
+							"g": 0.597656,
+							"pos": 0,
+							"r": 0.565193
+						},
+						{
+							"a": 1,
+							"b": 0.415978,
+							"g": 0.59375,
+							"pos": 1,
+							"r": 0.31543
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -161,
+				"y": 441.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "fbm2",
+			"node_position": {
+				"x": -532.5,
+				"y": 15.499969
+			},
+			"parameters": {
+				"folds": 1,
+				"iterations": 9,
+				"noise": 1,
+				"persistence": 0.73,
+				"scale_x": 20,
+				"scale_y": 20
+			},
+			"type": "fbm2"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -237,
+				"y": 28
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.104797,
+							"g": 0.187416,
+							"pos": 0,
+							"r": 0.265625
+						},
+						{
+							"a": 1,
+							"b": 0.316406,
+							"g": 0.376035,
+							"pos": 0.654545,
+							"r": 0.421875
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": -166,
+				"y": 124.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "blend_3",
+			"node_position": {
+				"x": 82,
+				"y": 245.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 0
+			},
+			"type": "blend"
+		},
+		{
+			"name": "blend_4",
+			"node_position": {
+				"x": -359,
+				"y": 261.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 9
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize_3",
+			"node_position": {
+				"x": -293,
+				"y": -86.5
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.820313,
+							"g": 0.820313,
+							"pos": 0,
+							"r": 0.820313
+						},
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 1,
+							"r": 1
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_5",
+			"node_position": {
+				"x": -83,
+				"y": -87
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize_4",
+			"node_position": {
+				"x": -401,
+				"y": 597.5
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.59375,
+							"g": 0.59375,
+							"pos": 0.545455,
+							"r": 0.59375
+						},
+						{
+							"a": 1,
+							"b": 0.699219,
+							"g": 0.699219,
+							"pos": 1,
+							"r": 0.699219
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_6",
+			"node_position": {
+				"x": 9,
+				"y": 28.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 0
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize_5",
+			"node_position": {
+				"x": -472.855225,
+				"y": -196.572388
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 0,
+					"points": [
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 0,
+							"r": 1
+						},
+						{
+							"a": 1,
+							"b": 0.554688,
+							"g": 1,
+							"pos": 1,
+							"r": 0.725159
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_7",
+			"node_position": {
+				"x": -227.855225,
+				"y": -220.572388
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "image_6",
+			"node_position": {
+				"x": -596.33551,
+				"y": 583.467773
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub3/Shrub3_leaf_clusters.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "decompose",
+			"node_position": {
+				"x": -867.33551,
+				"y": 375.467773
+			},
+			"parameters": {
+
+			},
+			"preview": 1,
+			"type": "decompose"
+		},
+		{
+			"name": "blend_8",
+			"node_position": {
+				"x": -888.33551,
+				"y": 492.467773
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 9
+			},
+			"type": "blend"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": 90.122803,
+				"y": 155.302368
+			},
+			"parameters": {
+				"color": 0
+			},
+			"type": "uniform_greyscale"
+		},
+		{
+			"name": "gaussian_blur",
+			"node_position": {
+				"x": -206.877197,
+				"y": 717.302368
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 4,
+				"param2": 0
+			},
+			"type": "gaussian_blur"
+		},
+		{
+			"name": "invert",
+			"node_position": {
+				"x": -390.877197,
+				"y": 752.302368
+			},
+			"parameters": {
+
+			},
+			"type": "invert"
+		},
+		{
+			"name": "gaussian_blur_2",
+			"node_position": {
+				"x": -218.377197,
+				"y": 831.802368
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 2,
+				"param2": 0
+			},
+			"type": "gaussian_blur"
+		},
+		{
+			"name": "gaussian_blur_3",
+			"node_position": {
+				"x": -220.377197,
+				"y": 941.802368
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 1,
+				"param2": 0
+			},
+			"type": "gaussian_blur"
+		},
+		{
+			"name": "invert_2",
+			"node_position": {
+				"x": 237.122803,
+				"y": 792.302368
+			},
+			"parameters": {
+
+			},
+			"type": "invert"
+		},
+		{
+			"name": "blend_9",
+			"node_position": {
+				"x": 160.122803,
+				"y": 904.302368
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 10
+			},
+			"type": "blend"
+		},
+		{
+			"name": "dilate",
+			"node_position": {
+				"x": -598.877197,
+				"y": 879.302368
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 0.03,
+				"param2": 0,
+				"param3": 0
+			},
+			"type": "dilate"
+		},
+		{
+			"name": "tones_step",
+			"node_position": {
+				"x": -428.877197,
+				"y": 1050.302368
+			},
+			"parameters": {
+				"invert": false,
+				"value": 0.01,
+				"width": 0
+			},
+			"type": "tones_step"
+		},
+		{
+			"name": "blend_10",
+			"node_position": {
+				"x": -167.863525,
+				"y": 1073.604858
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "image_7",
+			"node_position": {
+				"x": -854.006104,
+				"y": 238.304962
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub/Shrub_id_mask.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_3",
+			"node_position": {
+				"x": 212.993896,
+				"y": -144.695038
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub/Shrub_normal.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": 187.993896,
+				"y": 497.304932
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub/Shrub_ao.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_2",
+			"node_position": {
+				"x": 143.993896,
+				"y": 379.304932
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub/Shrub_alphamask.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_4",
+			"node_position": {
+				"x": 79.993896,
+				"y": 752.304932
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Shrub/Shrub3_stalk_mask.png"
+			},
+			"type": "image"
+		}
+	],
+	"parameters": {
+
+	},
+	"shortdesc": "",
+	"type": "graph"
+}

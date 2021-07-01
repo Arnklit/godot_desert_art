@@ -1,0 +1,541 @@
+{
+	"connections": [
+		{
+			"from": "tones_step",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "tex3d_fbm_4",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend_4",
+			"to_port": 1
+		},
+		{
+			"from": "tex3d_apply_invuvmap",
+			"from_port": 0,
+			"to": "blend_4",
+			"to_port": 0
+		},
+		{
+			"from": "blend_4",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 1
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "image_2",
+			"from_port": 0,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "image_2",
+			"from_port": 0,
+			"to": "tones_step",
+			"to_port": 0
+		},
+		{
+			"from": "image",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "image_3",
+			"from_port": 0,
+			"to": "graph_2",
+			"to_port": 0
+		},
+		{
+			"from": "graph_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "image_5",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "image_5",
+			"from_port": 0,
+			"to": "decompose",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "271",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/FlatBoulder/FlatBoulder"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 94,
+				"y": 40
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": false,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 10,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "blend_4",
+			"node_position": {
+				"x": -502.916656,
+				"y": -173.291672
+			},
+			"parameters": {
+				"amount": 0.38,
+				"blend_type": 4
+			},
+			"type": "blend"
+		},
+		{
+			"name": "tex3d_apply_invuvmap",
+			"node_position": {
+				"x": -486.916656,
+				"y": 98.208328
+			},
+			"parameters": {
+
+			},
+			"type": "tex3d_apply_invuvmap"
+		},
+		{
+			"name": "tex3d_fbm_4",
+			"node_position": {
+				"x": -784.916626,
+				"y": 89.208328
+			},
+			"parameters": {
+				"iterations": 3,
+				"noise": 1,
+				"persistence": 0.5,
+				"scale_x": 16,
+				"scale_y": 8,
+				"scale_z": 16
+			},
+			"type": "tex3d_fbm"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -486.916656,
+				"y": -57.791672
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.082353,
+							"g": 0.27451,
+							"pos": 0,
+							"r": 0.588235
+						},
+						{
+							"a": 1,
+							"b": 0.155518,
+							"g": 0.370117,
+							"pos": 0.046205,
+							"r": 0.710938
+						},
+						{
+							"a": 1,
+							"b": 0.124756,
+							"g": 0.348389,
+							"pos": 0.082324,
+							"r": 0.714355
+						},
+						{
+							"a": 1,
+							"b": 0.180908,
+							"g": 0.426025,
+							"pos": 0.142838,
+							"r": 0.799805
+						},
+						{
+							"a": 1,
+							"b": 0.221802,
+							"g": 0.451416,
+							"pos": 0.254545,
+							"r": 0.834473
+						},
+						{
+							"a": 1,
+							"b": 0.268799,
+							"g": 0.525391,
+							"pos": 0.363636,
+							"r": 0.898438
+						},
+						{
+							"a": 1,
+							"b": 0.218994,
+							"g": 0.444092,
+							"pos": 0.472727,
+							"r": 0.816895
+						},
+						{
+							"a": 1,
+							"b": 0.238525,
+							"g": 0.47583,
+							"pos": 0.569532,
+							"r": 0.850098
+						},
+						{
+							"a": 1,
+							"b": 0.171997,
+							"g": 0.416016,
+							"pos": 0.59475,
+							"r": 0.798828
+						},
+						{
+							"a": 1,
+							"b": 0.255615,
+							"g": 0.499512,
+							"pos": 0.733963,
+							"r": 0.866699
+						},
+						{
+							"a": 1,
+							"b": 0.172607,
+							"g": 0.411621,
+							"pos": 0.884668,
+							"r": 0.791016
+						},
+						{
+							"a": 1,
+							"b": 0.224854,
+							"g": 0.465576,
+							"pos": 1,
+							"r": 0.853027
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "decompose",
+			"node_position": {
+				"x": -679.916626,
+				"y": -82.791672
+			},
+			"parameters": {
+
+			},
+			"preview": 0,
+			"type": "decompose"
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": -206.416595,
+				"y": 41.576206
+			},
+			"parameters": {
+				"amount": 0.13,
+				"blend_type": 3
+			},
+			"type": "blend"
+		},
+		{
+			"name": "tones_step",
+			"node_position": {
+				"x": -192.416718,
+				"y": -84.159561
+			},
+			"parameters": {
+				"invert": false,
+				"value": 0.62,
+				"width": 0.21
+			},
+			"type": "tones_step"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -257.916656,
+				"y": 254.708328
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.742188,
+							"g": 0.742188,
+							"pos": 0,
+							"r": 0.742188
+						},
+						{
+							"a": 1,
+							"b": 0.943792,
+							"g": 0.943792,
+							"pos": 1,
+							"r": 0.943792
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": -251.916656,
+				"y": 178.208328
+			},
+			"parameters": {
+				"color": 0
+			},
+			"type": "uniform_greyscale"
+		},
+		{
+			"name": "image_2",
+			"node_position": {
+				"x": -465.357178,
+				"y": 215.530273
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/FlatBoulder/flatboulder_curvature.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": -201.357178,
+				"y": 376.530273
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/FlatBoulder/flatboulder_ao.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_3",
+			"node_position": {
+				"x": -58.357178,
+				"y": -234.469727
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/FlatBoulder/FlatBoulder_normal.png"
+			},
+			"type": "image"
+		},
+		{
+			"connections": [
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "decompose_2",
+					"to_port": 0
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 1,
+					"to": "combine",
+					"to_port": 1
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 2,
+					"to": "combine",
+					"to_port": 2
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 0,
+					"to": "invert",
+					"to_port": 0
+				},
+				{
+					"from": "invert",
+					"from_port": 0,
+					"to": "combine",
+					"to_port": 0
+				},
+				{
+					"from": "combine",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 0
+				}
+			],
+			"label": "Pre-process Normal",
+			"longdesc": "",
+			"name": "graph_2",
+			"node_position": {
+				"x": 118.776169,
+				"y": -210.46843
+			},
+			"nodes": [
+				{
+					"name": "invert",
+					"node_position": {
+						"x": 202.642822,
+						"y": -299.469727
+					},
+					"parameters": {
+
+					},
+					"type": "invert"
+				},
+				{
+					"name": "decompose_2",
+					"node_position": {
+						"x": 92.642822,
+						"y": -213.469727
+					},
+					"parameters": {
+
+					},
+					"type": "decompose"
+				},
+				{
+					"name": "combine",
+					"node_position": {
+						"x": 292.042816,
+						"y": -229.465851
+					},
+					"parameters": {
+
+					},
+					"type": "combine"
+				},
+				{
+					"name": "gen_inputs",
+					"node_position": {
+						"x": -207.357178,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_outputs",
+					"node_position": {
+						"x": 592.042847,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_parameters",
+					"node_position": {
+						"x": -4.223831,
+						"y": -599.469727
+					},
+					"parameters": {
+
+					},
+					"type": "remote",
+					"widgets": [
+
+					]
+				}
+			],
+			"parameters": {
+
+			},
+			"shortdesc": "",
+			"type": "graph"
+		},
+		{
+			"name": "image_5",
+			"node_position": {
+				"x": -761.619629,
+				"y": -242.755005
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/FlatBoulder/flatboulder_position.png"
+			},
+			"type": "image"
+		}
+	],
+	"parameters": {
+
+	},
+	"shortdesc": "",
+	"type": "graph"
+}

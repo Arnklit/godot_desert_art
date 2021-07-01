@@ -1,0 +1,505 @@
+{
+	"connections": [
+		{
+			"from": "tex3d_fbm_4",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "tex3d_apply_invuvmap",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "tones_step",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "decompose",
+			"from_port": 2,
+			"to": "blend_3",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend_3",
+			"to_port": 1
+		},
+		{
+			"from": "image_6",
+			"from_port": 0,
+			"to": "decompose",
+			"to_port": 0
+		},
+		{
+			"from": "image_2",
+			"from_port": 0,
+			"to": "tones_step",
+			"to_port": 0
+		},
+		{
+			"from": "image_2",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "blend_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "image_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 1
+		},
+		{
+			"from": "image_4",
+			"from_port": 0,
+			"to": "graph_3",
+			"to_port": 0
+		},
+		{
+			"from": "graph_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "image_5",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "636",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/Rocks"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 337.600006,
+				"y": 234.28653
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": false,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "blend_3",
+			"node_position": {
+				"x": -253.156067,
+				"y": 676.081787
+			},
+			"parameters": {
+				"amount": 0.08,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -307.785767,
+				"y": 503.107544
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.672049,
+							"g": 0.672049,
+							"pos": 0,
+							"r": 0.672049
+						},
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 1,
+							"r": 1
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": 11.347643,
+				"y": 249.762329
+			},
+			"parameters": {
+				"amount": 0.15,
+				"blend_type": 3
+			},
+			"type": "blend"
+		},
+		{
+			"name": "tones_step",
+			"node_position": {
+				"x": -324.915344,
+				"y": 385.94455
+			},
+			"parameters": {
+				"invert": false,
+				"value": 0.54,
+				"width": 0.11
+			},
+			"type": "tones_step"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -263.80426,
+				"y": 155.50058
+			},
+			"parameters": {
+				"amount": 0.31,
+				"blend_type": 4
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -245.005188,
+				"y": 599.971191
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.08179,
+							"g": 0.266577,
+							"pos": 0,
+							"r": 0.568974
+						},
+						{
+							"a": 1,
+							"b": 0.321215,
+							"g": 0.549753,
+							"pos": 1,
+							"r": 0.893817
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "decompose",
+			"node_position": {
+				"x": -441.005188,
+				"y": 598.072266
+			},
+			"parameters": {
+
+			},
+			"type": "decompose"
+		},
+		{
+			"name": "tex3d_apply_invuvmap",
+			"node_position": {
+				"x": -449.146637,
+				"y": 211.958633
+			},
+			"parameters": {
+
+			},
+			"type": "tex3d_apply_invuvmap"
+		},
+		{
+			"name": "tex3d_fbm_4",
+			"node_position": {
+				"x": -747.146606,
+				"y": 203.75824
+			},
+			"parameters": {
+				"iterations": 3,
+				"noise": 1,
+				"persistence": 0.5,
+				"scale_x": 8,
+				"scale_y": 1,
+				"scale_z": 8
+			},
+			"type": "tex3d_fbm"
+		},
+		{
+			"name": "image_2",
+			"node_position": {
+				"x": -524.299927,
+				"y": 422.144653
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/rocks_curvature.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_6",
+			"node_position": {
+				"x": -627.5,
+				"y": 599.658691
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/rocks_id_element.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_3",
+			"node_position": {
+				"x": 90.900055,
+				"y": 628.444763
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/rocks_ao.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": -15.499908,
+				"y": 382.963684
+			},
+			"parameters": {
+				"color": 0
+			},
+			"type": "uniform_greyscale"
+		},
+		{
+			"connections": [
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "decompose_2",
+					"to_port": 0
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 1,
+					"to": "combine",
+					"to_port": 1
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 2,
+					"to": "combine",
+					"to_port": 2
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 0,
+					"to": "invert",
+					"to_port": 0
+				},
+				{
+					"from": "invert",
+					"from_port": 0,
+					"to": "combine",
+					"to_port": 0
+				},
+				{
+					"from": "combine",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 0
+				}
+			],
+			"label": "Pre-process Normal",
+			"longdesc": "",
+			"name": "graph_3",
+			"node_position": {
+				"x": 186.067017,
+				"y": 103.795654
+			},
+			"nodes": [
+				{
+					"name": "invert",
+					"node_position": {
+						"x": 202.642822,
+						"y": -299.469727
+					},
+					"parameters": {
+
+					},
+					"type": "invert"
+				},
+				{
+					"name": "decompose_2",
+					"node_position": {
+						"x": 92.642822,
+						"y": -213.469727
+					},
+					"parameters": {
+
+					},
+					"type": "decompose"
+				},
+				{
+					"name": "combine",
+					"node_position": {
+						"x": 292.042816,
+						"y": -229.465851
+					},
+					"parameters": {
+
+					},
+					"type": "combine"
+				},
+				{
+					"name": "gen_inputs",
+					"node_position": {
+						"x": -207.357178,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_outputs",
+					"node_position": {
+						"x": 592.042847,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_parameters",
+					"node_position": {
+						"x": -4.223831,
+						"y": -599.469727
+					},
+					"parameters": {
+
+					},
+					"type": "remote",
+					"widgets": [
+
+					]
+				}
+			],
+			"parameters": {
+
+			},
+			"shortdesc": "",
+			"type": "graph"
+		},
+		{
+			"name": "image_4",
+			"node_position": {
+				"x": 41.067017,
+				"y": 55.295654
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/Rocks_normal.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_5",
+			"node_position": {
+				"x": -816.932983,
+				"y": 485.795654
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rocks/rocks_position.png"
+			},
+			"type": "image"
+		}
+	],
+	"parameters": {
+
+	},
+	"shortdesc": "",
+	"type": "graph"
+}

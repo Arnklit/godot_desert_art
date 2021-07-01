@@ -1,0 +1,488 @@
+{
+	"connections": [
+		{
+			"from": "tex3d_fbm_4",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 0
+		},
+		{
+			"from": "image_3",
+			"from_port": 0,
+			"to": "decompose",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 1,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "tex3d_apply_invuvmap",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "image_5",
+			"from_port": 0,
+			"to": "tones_step",
+			"to_port": 0
+		},
+		{
+			"from": "tones_step",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "image_4",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "image_5",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "decompose",
+			"from_port": 2,
+			"to": "blend_3",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend_3",
+			"to_port": 1
+		},
+		{
+			"from": "blend_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "image",
+			"from_port": 0,
+			"to": "graph_2",
+			"to_port": 0
+		},
+		{
+			"from": "graph_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "image_6",
+			"from_port": 0,
+			"to": "tex3d_apply_invuvmap",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "272",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rockpile/Rockpile"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 75.199997,
+				"y": 28.786057
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": false,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 10,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "tex3d_fbm_4",
+			"node_position": {
+				"x": -790.448853,
+				"y": 53.269749
+			},
+			"parameters": {
+				"iterations": 3,
+				"noise": 1,
+				"persistence": 0.5,
+				"scale_x": 10,
+				"scale_y": 4,
+				"scale_z": 10
+			},
+			"type": "tex3d_fbm"
+		},
+		{
+			"name": "tex3d_apply_invuvmap",
+			"node_position": {
+				"x": -489.448853,
+				"y": 60.470135
+			},
+			"parameters": {
+
+			},
+			"type": "tex3d_apply_invuvmap"
+		},
+		{
+			"name": "image_3",
+			"node_position": {
+				"x": -647.907471,
+				"y": 459.393127
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/RockPile/rockpile_id_element.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "decompose",
+			"node_position": {
+				"x": -484.307404,
+				"y": 447.58374
+			},
+			"parameters": {
+
+			},
+			"type": "decompose"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -288.307404,
+				"y": 449.482697
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.08179,
+							"g": 0.266577,
+							"pos": 0,
+							"r": 0.568974
+						},
+						{
+							"a": 1,
+							"b": 0.321215,
+							"g": 0.549753,
+							"pos": 1,
+							"r": 0.893817
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -308.106476,
+				"y": 5.012097
+			},
+			"parameters": {
+				"amount": 0.31,
+				"blend_type": 4
+			},
+			"type": "blend"
+		},
+		{
+			"name": "image_4",
+			"node_position": {
+				"x": 21.875002,
+				"y": 428.249969
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/RockPile/rockpile_ao.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "image_5",
+			"node_position": {
+				"x": -530.902771,
+				"y": 252.871964
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/RockPile/rockpile_curvature.png"
+			},
+			"type": "image"
+		},
+		{
+			"name": "tones_step",
+			"node_position": {
+				"x": -368.21756,
+				"y": 235.456055
+			},
+			"parameters": {
+				"invert": false,
+				"value": 0.54,
+				"width": 0.11
+			},
+			"type": "tones_step"
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": -192.754593,
+				"y": 124.86145
+			},
+			"parameters": {
+				"amount": 0.15,
+				"blend_type": 3
+			},
+			"type": "blend"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -351.087982,
+				"y": 352.619049
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.672049,
+							"g": 0.672049,
+							"pos": 0,
+							"r": 0.672049
+						},
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 1,
+							"r": 1
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend_3",
+			"node_position": {
+				"x": -296.458282,
+				"y": 525.593323
+			},
+			"parameters": {
+				"amount": 0.08,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": -117.695557,
+				"y": -107.630768
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rockpile/Rockpile_normal.png"
+			},
+			"type": "image"
+		},
+		{
+			"connections": [
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "decompose_2",
+					"to_port": 0
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 1,
+					"to": "combine",
+					"to_port": 1
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 2,
+					"to": "combine",
+					"to_port": 2
+				},
+				{
+					"from": "decompose_2",
+					"from_port": 0,
+					"to": "invert",
+					"to_port": 0
+				},
+				{
+					"from": "invert",
+					"from_port": 0,
+					"to": "combine",
+					"to_port": 0
+				},
+				{
+					"from": "combine",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 0
+				}
+			],
+			"label": "Pre-process Normal",
+			"longdesc": "",
+			"name": "graph_2",
+			"node_position": {
+				"x": 37.304413,
+				"y": -91.130768
+			},
+			"nodes": [
+				{
+					"name": "invert",
+					"node_position": {
+						"x": 202.642822,
+						"y": -299.469727
+					},
+					"parameters": {
+
+					},
+					"type": "invert"
+				},
+				{
+					"name": "decompose_2",
+					"node_position": {
+						"x": 92.642822,
+						"y": -213.469727
+					},
+					"parameters": {
+
+					},
+					"type": "decompose"
+				},
+				{
+					"name": "combine",
+					"node_position": {
+						"x": 292.042816,
+						"y": -229.465851
+					},
+					"parameters": {
+
+					},
+					"type": "combine"
+				},
+				{
+					"name": "gen_inputs",
+					"node_position": {
+						"x": -207.357178,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_outputs",
+					"node_position": {
+						"x": 592.042847,
+						"y": -247.46843
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"group_size": 0,
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_parameters",
+					"node_position": {
+						"x": -4.223831,
+						"y": -599.469727
+					},
+					"parameters": {
+
+					},
+					"type": "remote",
+					"widgets": [
+
+					]
+				}
+			],
+			"parameters": {
+
+			},
+			"shortdesc": "",
+			"type": "graph"
+		},
+		{
+			"name": "image_6",
+			"node_position": {
+				"x": -746.989685,
+				"y": 253.92804
+			},
+			"parameters": {
+				"image": "C:/Users/Kasper/OneDrive/Docs/Projects/Videos/Video - How Good Can Godot Look/Rockpile/rockpile_position.png"
+			},
+			"type": "image"
+		}
+	],
+	"parameters": {
+
+	},
+	"shortdesc": "",
+	"type": "graph"
+}
